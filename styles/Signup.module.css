@@ -1,0 +1,8 @@
+.register {
+    background-color: #3577f0;
+}
+
+.card_wrapper {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+}
