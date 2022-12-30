@@ -102,3 +102,33 @@
     color: whitesmoke;
     margin-right: 10px;
 }
+
+/* products section */
+
+.products_section_wrapper {
+    padding: 150px 0 0 0;
+}
+
+.products_title_wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.products_title_wrapper .products_title {
+    color: #3577f0;
+    font-weight: 800;
+    margin: 0;
+}
+
+.products_title_wrapper .bag_icon_circle {
+    background-color: #3577f0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: whitesmoke;
+    margin-right: 10px;
+}

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 export default function Header() {
     const router = useRouter();
     return (
-        <div style={{ position: "fixed",width:"100%" }}>
+        <div style={{ position: "fixed", width: "100%", zIndex: "10000" }}>
             <div className={styles.header}>
                 <div className={styles.links_container}>
                     <div>

@@ -2,11 +2,24 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Button from '../components/button/button'
 import styles from '../styles/Home.module.css'
 import { BsCart } from 'react-icons/bs'
-import { FaFire, FaHeadphones, FaSalesforce, FaTag, FaTags } from 'react-icons/fa'
+import { FaEye, FaFire, FaHeadphones, FaHeart, FaSalesforce, FaShoppingBag, FaTag, FaTags } from 'react-icons/fa'
 import Carousel from '../components/carousel/carousel'
 import Timer from '../components/timer/timer'
+import Card from '../components/card/card'
 
 export default function Home() {
+
+  const products = [
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+    { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
+  ]
+
   return (
     <>
       {/* hero section */}
@@ -88,6 +101,45 @@ export default function Home() {
               </Col>
             </Row>
           </div>
+        </Container>
+      </section>
+      <section className={styles.products_section_wrapper}>
+        <Container>
+          <Row className="align-items-center">
+            <Col md={12}>
+              <div className={styles.products_title_wrapper}>
+                <span className={styles.bag_icon_circle}>
+                  <FaShoppingBag />
+                </span>
+                <p className={styles.products_title}>Our Products</p>
+              </div>
+              <h1>Explore our Products</h1>
+            </Col>
+          </Row>
+          <Row className="align-items-center mt-4">
+            {products.map((item, index) => {
+              return (
+                <Col md={3}>
+                  <Card className="products_card">
+                    <img style={{ width: "100%" }} src={item.image} alt="" />
+                    <p>{item.title}</p>
+                    <h5>$ {item.price}</h5>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <div>
+                        <FaEye />
+                      </div>
+                      <Button width="140px" height="40px" backgroundColor="#FF497C" color="white" borderRadius="6px" fontWeight="700">
+                        Add To Cart
+                      </Button>
+                      <div>
+                        <FaHeart />
+                      </div>
+                    </div>
+                  </Card>
+                </Col>
+              )
+            })}
+          </Row>
         </Container>
       </section>
     </>
