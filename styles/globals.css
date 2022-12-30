@@ -64,3 +64,59 @@
   z-index: 9;
   transition: all .3s;
 }
+
+.figure {
+  position: relative;
+  width: 360px;
+  max-width: 100%;
+}
+
+.figure img.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.figure:hover img.image-hover {
+  opacity: 1;
+}
+
+/* timer */
+
+/* Limited-offer-section */
+
+.day-container,
+.hour-container,
+.min-container,
+.sec-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px 0 0;
+}
+
+.day, .hour, .min, .sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: rgb(38, 38, 38);
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.day p, .hour p, .min p, .sec p {
+  margin: 0;
+  color: white;
+}

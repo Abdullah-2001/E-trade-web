@@ -72,3 +72,33 @@
     font-weight: 800;
     margin: 0;
 }
+
+/* sale section */
+
+.sale_section_wrapper {
+    padding: 150px 0 0 0;
+}
+
+.sale_title_wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sale_title_wrapper .sale_title {
+    color: #3577f0;
+    font-weight: 800;
+    margin: 0;
+}
+
+.sale_title_wrapper .headphone_icon_circle {
+    background-color: #3577f0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: whitesmoke;
+    margin-right: 10px;
+}
