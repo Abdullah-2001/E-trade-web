@@ -6,6 +6,8 @@ import { FaEye, FaFire, FaHeadphones, FaHeart, FaSalesforce, FaShoppingBag, FaTa
 import Carousel from '../components/carousel/carousel'
 import Timer from '../components/timer/timer'
 import Card from '../components/card/card'
+import ModalComp from '../components/modal/modal'
+import { useState } from 'react'
 
 export default function Home() {
 
@@ -19,6 +21,7 @@ export default function Home() {
     { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
     { image: "https://new.axilthemes.com/demo/template/etrade/assets/images/product/poster/poster-03.png", title: "Product", price: 10.87 },
   ]
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <>
@@ -121,17 +124,28 @@ export default function Home() {
               return (
                 <Col md={3}>
                   <Card className="products_card">
-                    <img style={{ width: "100%" }} src={item.image} alt="" />
-                    <p>{item.title}</p>
-                    <h5>$ {item.price}</h5>
-                    <div style={{ display: "flex", alignItems: "center" }}>
-                      <div>
+                    <div className="figure">
+                      <a href="https://www.example.com/">
+                        <img
+                          className="Sirv image-main"
+                          src="https://static-01.daraz.pk/p/fd7e4ccdd08f089b0a9f55ca53eed1fe.jpg"
+                        />
+                        <img
+                          className="Sirv image-hover"
+                          src="https://pakistanstore.pk/wp-content/uploads/2022/09/PS4-Dualshock-Wireless-Game-Controller.jpg"
+                        />
+                      </a>
+                    </div>
+                    <div className="title-price-container">
+                      <p>{item.title}</p>
+                      <h5>$ {item.price}</h5>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around", margin: "20px 0" }}>
+                      <div className="eye-icon-container" onClick={() => setModalShow(true)}>
                         <FaEye />
                       </div>
-                      <Button width="140px" height="40px" backgroundColor="#FF497C" color="white" borderRadius="6px" fontWeight="700">
-                        Add To Cart
-                      </Button>
-                      <div>
+                      <Button width="140px" height="40px" backgroundColor="#FF497C" color="white" borderRadius="6px" fontWeight="700">Add To Cart</Button>
+                      <div className="heart-icon-container">
                         <FaHeart />
                       </div>
                     </div>
@@ -141,6 +155,7 @@ export default function Home() {
             })}
           </Row>
         </Container>
+        <ModalComp show={modalShow} onHide={() => setModalShow(false)} title="This is title" body="This is body" />
       </section>
     </>
   )

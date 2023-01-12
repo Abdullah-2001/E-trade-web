@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import '../styles/globals.css'
 import Layout from './layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
