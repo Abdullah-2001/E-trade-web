@@ -1,9 +1,9 @@
 .header {
     background-color: white;
     box-shadow: 0 2px 10px 0 rgb(0 0 0 / 10%);
-    margin: 15px 30px;
+    /* margin: 15px 30px; */
     padding: 0 40px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .header .links_container {

@@ -76,7 +76,7 @@
 /* sale section */
 
 .sale_section_wrapper {
-    padding: 150px 0 0 0;
+    padding: 100px 0 0 0;
 }
 
 .sale_title_wrapper {
@@ -106,7 +106,7 @@
 /* products section */
 
 .products_section_wrapper {
-    padding: 150px 0 0 0;
+    padding: 100px 0 0 0;
 }
 
 .products_title_wrapper {
@@ -131,4 +131,10 @@
     border-radius: 100%;
     color: whitesmoke;
     margin-right: 10px;
+}
+
+/* sale section */
+
+.sale_section_wrapper {
+    padding: 100px 0 0 0;
 }
